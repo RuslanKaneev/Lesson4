@@ -9,8 +9,8 @@ static string GetFullName(string firstName, string lastName, string patronymic)
 
 
 {
-    int count = 0;
-    while(count != 4)
+    int count = 0;//счетчик
+    while(count != 4) // запрашивать  4 раза ввод ФИО
     {
         Console.WriteLine("Введите Имя пользователя");
 
