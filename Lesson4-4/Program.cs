@@ -1,16 +1,14 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-uint number1 = 0;
-uint number2 = 1;
+Console.WriteLine("Введите номер числа Фибоначчи");
+int number = Convert.ToInt32(Console.ReadLine());
 
-for (int i = 0; i < 4; i++)
+static int Fibonachhi(int number)
 {
-    uint fibonachhi = number1 + number2;
-    Console.WriteLine(fibonachhi);
-    number2 = fibonachhi;
-    fibonachhi += fibonachhi;
-    number1 = fibonachhi;
-    Console.WriteLine(fibonachhi);
+    if (number == 0 || number == 1)
+    {
+        return number;
+    }
+    return Fibonachhi(number-1) + Fibonachhi(number - 2);
 }
-Console.ReadLine();
-
+Console.WriteLine(Fibonachhi(number));
